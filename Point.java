@@ -1,17 +1,9 @@
-/****************************************************************************************************/
-/* ********************* TECH-RANCH ******************************************************/
-/* ***************  PROJECT NAME : Sudoku Game Application  Demonstration****************/
-/* ***************  AUTHOR : ANJALI SINGH  ***********************************************/
-/* ***************  Dated : OCTOBER 17, 2019, Thursday *************************************/
+package com.rishabh;
 
-package soduko.game;
 public class Point {
-	int x, y;
-	public Point(int x, int y){
-		this.x = x;
-		this.y = y;
-	}
+    int x,y;
+    public Point(int x,int y){
+        this.x = x;
+        this.y = y;
+    }
 }
-/* *****************COPY RIGHT - TECH-RANCH @ 2019***********/
-/* ******************** LET's MAKE CODING FUN ! *************/
-/* **********************************************************/
