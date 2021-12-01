@@ -12,7 +12,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
-import javax.swing.JPanel;
 import javax.swing.Timer;
 import java.awt.Font;
 
@@ -36,7 +35,8 @@ public class Sudoku {
         if(Integer.parseInt(sec)/10 == 0) sec = "0"+sec;
         return min+":"+sec;
     }
-    //Event handler when game is over.
+
+    //for handling the event when game is over.
     public void gameOver(){
         timerLabel.setVisible(false);
         timer.stop();
@@ -70,20 +70,15 @@ public class Sudoku {
             public void run() {
                 try {
                     Sudoku window = new Sudoku();
-                    frame.setTitle("Sudoku Game by Tech-Ranch");
-////////////////////////////////////////////////////////////////////
+                    frame.setTitle("Sudoku Game for OOPS LAB Project");
                     ImageIcon logo = null;
-
-                    java.net.URL imgURL = Sudoku.class.getResource("logo_tr.png");
+                    java.net.URL imgURL = Sudoku.class.getResource("logo.png");
                     if (imgURL != null) {
                         logo = new ImageIcon(imgURL);
                         frame.setIconImage(logo.getImage());
                     } else {
                         JOptionPane.showMessageDialog(frame, "Icon image not found.");
                     }
-///////////////////////////////////////////////////////////
-
-
                     window.frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -91,7 +86,6 @@ public class Sudoku {
             }
         });
     }
-
 
     public Sudoku() {
         initialize();
@@ -113,9 +107,7 @@ public class Sudoku {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
 
-        //////////////////////////////////GRID START /////////////////////////////////////////////////////////////
-
-
+        //Starting of Grid
         int h = 12, w = 13, hi = 39, wi = 37;
 
         for(int i = 0; i < 9 ; i++){
@@ -141,8 +133,7 @@ public class Sudoku {
                 grid[i][j].setEditable(false);
             }
         }
-        //////////////////////////////////  GRID END  /////////////////////////////////////////////////////////////
-
+        //Ending of GRID
         submitButton.setVisible(false);
         timerLabel.setVisible(false);
         submitButton.addActionListener(new ActionListener() {
